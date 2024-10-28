@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Drive</title>
+    <link rel="icon" type="image/x-icon" href="/logo1.png"> 
+    <!-- <link rel="stylesheet" href="/pico.classless.min.css" /> --> <!-- TODO REMOVE pico-->
+    <link rel="stylesheet" href="/css/index.css" />
+    <!-- Global -->
+  </head>
+  <body>
+    <%- include('partials/header') %> 
+
+    <div class="page-container">
+      <!-- Main Content with Text and Image Side by Side -->
+      <div class="content-wrapper">
+        <div class="content-text">
+          <img src="/drivelogo.svg" alt="Google Logo" class="drive-logo" />
+          <h1>Cloud-Speicher leicht gemacht</h1>
+          <p>
+            Einfacher und skalierbarer Cloud-Speicher für Einzelpersonen und
+            Teams aller Größen. Gespeicherte Dateien lassen sich auf jedem
+            Gerät hochladen, öffnen, freigeben und bearbeiten.
+          </p>
+          <!-- Anmelde und Sign-up Buttons -->
+          <div class="button-group">
+            <a href="/login" role="button" class="button primary">Anmelden</a>
+            <!-- Blauer Button -->
+            <a href="/sign-up" role="button" class="button secondary">
+              Konto erstellen
+            </a>
+            <!-- Weißer Button -->
+          </div>
+        </div>
+
+        <!-- Image Section -->
+        <div class="content-image">
+          <img src="/bg.webp" alt="Background Image" class="bg-image" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature Section with Video and Text -->
+    <div class="feature-section">
+      <div class="feature-video">
+        <video autoplay loop muted playsinline>
+          <source src="/video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    
+      <div class="feature-text">
+        <h2>Intelligentere Entscheidungen treffen mit Gemini in Google Drive</h2>
+        <p>
+          Sie erlangen schneller wertvolle Erkenntnisse, indem Sie sich lange Dokumente zusammenfassen, Informationen darstellen und die wichtigsten Fakten aus Inhalten herausfiltern lassen, ohne in mehreren Dateien suchen zu müssen.
+          <a href="#">Probieren Sie Gemini für Google Workspace</a> doch einmal aus, um die vielfältigen Funktionen von Gemini kennenzulernen.
+        </p>
+      </div>
+    </div>
+<!--  MOBILE  -->
+    <div class="mobile-app-section">
+      <h2>Drive für Mobilgeräte</h2>
+      <div class="app-buttons">
+        <a href="#">
+          <img src="/appstore.png" alt="Download on the App Store" class="app-button">
+        </a>
+        <a href="#">
+          <img src="/gp.webp" alt="Get it on Google Play" class="app-button">
+        </a>
+      </div>
+    </div>
+    
+  <!-- FAQ -->
+<div class="faq-section">
+  <h2>Sie möchten mehr über Google Drive erfahren?</h2>
+  <p>In den häufig gestellten Fragen finden Sie viele nützliche Informationen.</p>
+  <div class="faq-controls">
+    <a href="#" class="expand-all">Alle maximieren</a>
+    <span class="arrow">⬇</span>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Kann ich Dateien von meiner aktuellen Speicherlösung zu Google Drive migrieren?</button>
+    <div class="faq-answer">
+      <p>Ja, Sie können Ihre Dateien problemlos zu Google Drive migrieren, indem Sie unsere Migrations-Tools verwenden.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Wie viel Speicherplatz erhalte ich bei Google Drive?</button>
+    <div class="faq-answer">
+      <p>Google Drive bietet standardmäßig 15 GB kostenlosen Speicherplatz. Für zusätzliche Kapazität können Sie auf einen der kostenpflichtigen Pläne upgraden.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Was ist anders bei der Unternehmensversion von Google Drive?</button>
+    <div class="faq-answer">
+      <p>Die Unternehmensversion von Google Drive bietet erweiterte Sicherheits- und Verwaltungstools sowie mehr Speicherplatz, um den Anforderungen von Unternehmen gerecht zu werden.</p>
+    </div>
+  </div>
+</div>
+    
+<!-- Footer cta-->
+<div class="footer-call-to-action">
+  <img src="/action.svg" alt="Google Drive Logo" class="footer-logo">
+  <h2>Mit Google Drive Daten speichern, verwalten und gemeinsam bearbeiten</h2>
+  <div class="footer-buttons">
+    <a href="#" class="button primary">Anmelden</a>
+    <a href="#" class="button secondary">Google Drive testen</a>
+  </div>
+</div>
+<!-- Newsletter-->
+<div class="newsletter-section">
+  <h2>Für den Google Workspace-Newsletter anmelden</h2>
+  <form class="newsletter-form">
+    <div class="form-group">
+      <input type="email" placeholder="E-Mail-Adresse eingeben" required>
+      <select name="country" required>
+        <option value="Deutschland">Deutschland</option>
+        <option value="Österreich">Österreich</option>
+        <option value="Schweiz">Schweiz</option>
+        <!-- Weitere Länderoptionen können hinzugefügt werden -->
+      </select>
+    </div>
+    
+    <div class="form-checkbox">
+      <input type="checkbox" id="subscribe-updates" name="subscribe-updates">
+      <label for="subscribe-updates">Ich möchte Google Cloud-E-Mails erhalten und so regelmäßig über Neuigkeiten, Produktupdates, Veranstaltungen, Sonderangebote und andere relevante Aktionen informiert werden. Sie können den Newsletter selbstverständlich jederzeit wieder abbestellen.</label>
+    </div>
+    
+    <p class="form-disclaimer">Ich bin damit einverstanden, dass meine personenbezogenen Daten gemäß der <a href="#">Datenschutzerklärung von Google</a> verarbeitet werden.</p>
+    
+    <button type="submit" class="button primary">Anmelden</button>
+  </form>
+</div>
+<!--Footer-->
+<footer class="footer">
+  <div class="footer-top">
+    <a href="#" class="footer-link">Folgen Sie unserem Blog</a>
+    <div class="footer-social-icons">
+      <a href="#"><img src="/icons/social-x.svg" alt="X" /></a>
+      <a href="#"><img src="/icons/social-youtube.svg" alt="YouTube" /></a>
+      <a href="#"><img src="/icons/social-linkedin.svg" alt="LinkedIn" /></a>
+      <a href="#"><img src="/icons/social-instagram.svg" alt="Instagram" /></a>
+      <a href="#"><img src="/icons/social-facebook.svg" alt="Facebook" /></a>
+      <a href="#"><img src="/icons/social-tiktok.svg" alt="TikTok" /></a>
+    </div>
+  </div>
+
+  <div class="footer-links">
+    <div class="footer-column">
+      <h4>Enthaltene Anwendungen</h4>
+      <ul>
+        <li><a href="#">Gmail</a></li>
+        <li><a href="#">Meet</a></li>
+        <li><a href="#">Chat</a></li>
+        <li><a href="#">Kalender</a></li>
+        <li><a href="#">Drive</a></li>
+        <li><a href="#">Docs</a></li>
+        <li><a href="#">Tabellen</a></li>
+        <li><a href="#">Präsentationen</a></li>
+        <li><a href="#">Formulare</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Sicherheit und Verwaltung</h4>
+      <ul>
+        <li><a href="#">Admin</a></li>
+        <li><a href="#">Endpunkt</a></li>
+        <li><a href="#">Vault</a></li>
+        <li><a href="#">Work Insights</a></li>
+      </ul>
+      <h4>Lösungen</h4>
+      <ul>
+        <li><a href="#">Neue Unternehmen</a></li>
+        <li><a href="#">Kleine Unternehmen</a></li>
+        <li><a href="#">Große Unternehmen</a></li>
+        <li><a href="#">Einzelhandel</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Preise</h4>
+      <ul>
+        <li><a href="#">Version auswählen</a></li>
+      </ul>
+      <h4>Add-ons</h4>
+      <ul>
+        <li><a href="#">Gemini für Workspace</a></li>
+        <li><a href="#">Google Voice</a></li>
+        <li><a href="#">AppSheet</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Ressourcen</h4>
+      <ul>
+        <li><a href="#">Working remotely</a></li>
+        <li><a href="#">Sicherheit</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Partner</a></li>
+      </ul>
+      <h4>Mehr von Google</h4>
+      <ul>
+        <li><a href="#">Google Cloud</a></li>
+        <li><a href="#">Google Domains</a></li>
+        <li><a href="#">Chrome Enterprise</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <ul>
+      <li><a href="#">Über Google</a></li>
+      <li><a href="#">Google-Produkte</a></li>
+      <li><a href="#">Datenschutz</a></li>
+      <li><a href="#">Nutzungsbedingungen</a></li>
+    </ul>
+    <div class="language-selector">
+      <a href="#">Deutsch</a>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

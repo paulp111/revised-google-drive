@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profilseite</title>
+    <link rel="icon" type="image/x-icon" href="/logo.svg"> 
+    <link rel="stylesheet" href="/pico.classless.min.css" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Profilseite</h1>
+        <!-- Navigation -->
+        <nav>
+          <a href="/">Zurück zu den Uploads</a>
+          <form action="/logout" method="POST" style="display: inline;">
+            <a href="#" onclick="this.closest('form').submit()">Logout</a>
+          </form>
+        </nav>
+      </header>
+
+      <section>
+        <h2>Benutzerdetails</h2>
+        <p><strong>Name:</strong> <%= user.name %></p>
+        <p><strong>E-Mail:</strong> <%= user.email %></p>
+      </section>
+
+      <section>
+        <h2>Statistiken</h2>
+        <p><strong>Anzahl der hochgeladenen Dateien:</strong> <%= user.files.length %></p>
+        <p><strong>Gesamtgröße der Dateien:</strong> Coming Soon!</p>
+      </section>
+
+      <section>
+        <h2>Passwort ändern</h2>
+        <form action="/profile/change-password" method="POST">
+          <label for="currentPassword">Aktuelles Passwort:</label>
+          <input type="password" id="currentPassword" name="currentPassword" required />
+      
+          <label for="newPassword">Neues Passwort:</label>
+          <input type="password" id="newPassword" name="newPassword" required />
+      
+          <button type="submit">Passwort ändern</button>
+        </form>
+      </section>
+      
+
+      <section>
+        <h2>Konto löschen</h2>
+        <form action="/delete-account" method="POST" onsubmit="return confirm('Sind Sie sicher, dass Sie Ihr Konto und alle Daten löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden!');">
+          <button type="submit" class="delete-btn">Konto löschen</button>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
