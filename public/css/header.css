@@ -1,15 +1,5 @@
 /* --------------------- START HEADER --------------------- */
-/* RGB LINE */
-/*
-.header-navbar {
-    width: 100vw; 
-    overflow: hidden;
-    background-color: white;
-    border-bottom: 2px solid;
-    border-image: linear-gradient(to right, blue, violet, pink) 1;
-    box-sizing: border-box;
-}
-    */
+
 .header-navbar {
   width: 100%;
   background-color: white;
@@ -23,7 +13,7 @@
   justify-content: space-between;
   width: 100%;
   margin: 0 auto;
-  padding: 8px 24px;
+  padding: 9px 24px;
   box-sizing: border-box;
 }
 
@@ -83,39 +73,7 @@
 
 /* Dropdown Arrow End */
 
-.header-nav-buttons {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.header-button {
-  font-size: 14px;
-  padding: 14px 24px;
-  border-radius: 4px;
-  font-weight: 500;
-  font-family: "Product Sans", Product Sans, Arial, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.header-button.primary {
-  background-color: #1a73e8;
-  color: #ffffff;
-}
-
-.header-button.primary:hover {
-  background-color: #135ab6;
-}
-
-
-
-/* --------------------- END HEADER --------------------- */
-/*
-
+/* Divided Button */
 /* Wrapper for the divided button */
 .divided-button {
     display: inline-flex;
@@ -153,3 +111,38 @@
 .divided-button:hover .button-arrow svg path {
     fill: #135ab6; 
 }
+
+/* Divided Button END */
+
+.header-nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-button {
+  font-size: 14px;
+  padding: 14px 24px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-family: "Product Sans", Product Sans, Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-button.primary {
+  background-color: #1a73e8;
+  color: #ffffff;
+}
+
+.header-button.primary:hover {
+  background-color: #135ab6;
+}
+
+
+
+/* --------------------- END HEADER --------------------- */
+

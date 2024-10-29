@@ -1,4 +1,4 @@
-/* ⸜(｡˃ ᵕ ˂ )⸝♡ */
+/* ------------------------ ⸜(｡˃ ᵕ ˂ )⸝♡ --------------------- */
 /* --------------------- START Farbvariablen ---------------------*/
 :root {
   --light-gray: #f9f9f9;
@@ -9,10 +9,12 @@
   --footer-bg: #f9f9f9;
   --text-color: #333;
   --background-color: #f8f9fa;
+  --headings-color: #202124;
+  --para-color: #5F6368;
 }
 /* --------------------- END Farbvariablen --------------------- */
 
-/* --------------------- HERO --------------------- */
+/* --------------------- START HERO --------------------- */
 /* Hero Container */
 .page-container {
   display: flex;
@@ -40,18 +42,21 @@
 }
 
 .content-text h1 {
-  font-size: 2.5rem;
+  font-size: 48px;
   margin-bottom: 20px;
   hyphens: auto;
   word-break: break-word;
   text-align: left;
+  color: var(--headings-color); /* Heading color */
 }
 
 .content-text p {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 20px;
+  color: var(--para-color); /* Paragraph color */
 }
+
 
 /* Hero Image (Hello James) */
 .content-image {
@@ -70,6 +75,37 @@
   margin-bottom: 20px;
 }
 /* --------------------- END Hero --------------------- */
+
+/* --------------------- START Rounded Navbar Section ---------------------  */
+.rounded-navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 30px;
+  padding: 10px 20px;
+  max-width: 80%;
+  margin: 20px auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+}
+
+.rounded-navbar .nav-item {
+  color: #5f6368;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.rounded-navbar .nav-item:hover {
+  color: #202124;
+}
+
+.rounded-navbar .nav-item.active {
+  font-weight: bold;
+  color: #202124;
+}
+/* --------------------- END Rounded Navbar Section ---------------------  */
 
 /* --------------------- START Buttons FOR HERO and CTA --------------------- */
 .button-group {
@@ -149,17 +185,19 @@
 }
 
 .feature-text h2 {
-  font-size: 2rem;
+  font-size: 34px;
   margin-bottom: 15px;
   margin-right: 0px;
   text-align: left;
   hyphens: auto;
   word-break: break-word;
+  color: var(--headings-color); 
 }
 
 .feature-text p {
-  font-size: 1.2rem;
+  font-size: 18px;
   line-height: 1.6;
+  color: var(--para-color); 
 }
 
 .feature-text a {
@@ -175,7 +213,7 @@
 /* --------------------- START APPSTORE SECTION --------------------- */
 .mobile-app-section {
   text-align: center;
-  background-color: var(--footer-bg);
+  background-color: var(--background-color);
   padding: 40px 20px;
   max-width: 80%;
   margin: 0 auto;
@@ -185,7 +223,7 @@
 .mobile-app-section h2 {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  color: var(--text-color);
+  color: var(--headings-color);
 }
 
 .app-buttons {
@@ -200,45 +238,109 @@
 }
 /* --------------------- END APPSTORE SECTION --------------------- */
 
-/* --------------------- SIGN UP FORM --------------------- */
-/* does nothing
-.newsletter-signup {
-  flex: 1;
-  max-width: 600px;
+/* --------------------- START SIGN UP FORM --------------------- */
+.newsletter-section {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  width: 100%;
+  text-align: center;
 }
 
-.newsletter-signup h2 {
-  font-size: 1.8rem;
+.newsletter-section h2 {
+  font-size: 1.5rem; /* Slightly larger title to maintain hierarchy */
   margin-bottom: 20px;
+  color: #202124;
 }
-*/
 
-.newsletter-form .form-group {
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Form group styling for email and select inputs */
+.form-group {
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
+  justify-content: center;
 }
 
-.newsletter-form input[type="email"],
-.newsletter-form select {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  flex: 1;
+.form-group input[type="email"],
+.form-group select {
+  padding: 10px 15px;
+  font-size: 12px; /* Set font size to 12px */
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+  background-color: #ffffff;
+  color: #202124;
+  box-sizing: border-box;
 }
 
-.newsletter-form button {
-  padding: 10px 20px;
-  background-color: var(--primary-blue);
-  color: white;
-  border: none;
-  border-radius: 5px;
+/* Checkbox text block styling */
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 9px; 
+  color: #5f6368;
+}
+
+.form-checkbox input {
+  margin-right: 8px;
+}
+
+.form-checkbox label {
+  display: block;
+  color: #5f6368;
+  line-height: 1.5;
+}
+
+/* Disclaimer paragraph: left-aligned */
+.form-disclaimer {
+  font-size: 12px; 
+  color: #5f6368;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-disclaimer a {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+.form-disclaimer a:hover {
+  text-decoration: underline;
+}
+
+
+.news-primary {
+  background-color: #ffffff;
+  color: var(--primary-blue);
+  padding: 10px 32px;
+  font-size: 12px; 
+  border: 1px solid #000000; 
+  border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+  margin: 20px auto 0;
 }
 
-.newsletter-form button:hover {
-  background-color: var(--hover-blue);
+.news-primary:hover {
+  background-color: #f0f0f0;
+  color: var(--hover-blue);
 }
+
+
+
+
 /* --------------------- END SIGN UP FORM --------------------- */
 
 /* --------------------- START FAQ SECTION --------------------- */
@@ -251,11 +353,12 @@
 .faq-section h2 {
   font-size: 2rem;
   margin-bottom: 10px;
+  color: var(--headings-color);
 }
 
 .faq-section p {
   font-size: 1.1rem;
-  color: #6c6c6c;
+  color: var(--para-color);
   margin-bottom: 30px;
 }
 
@@ -401,4 +504,58 @@
 .form-disclaimer a:hover {
   text-decoration: underline;
 }
+
 /* --------------------- END NEWSLETTER SECTION --------------------- */
+
+/* --------------------- START Cookie Consent Bar --------------------- */
+.cookie-consent {
+  position: fixed;
+  color: var(--background-color);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  color: #5f6368;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.12);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.cookie-consent p {
+  margin: 0;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.cookie-link {
+  color: #1a73e8;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.cookie-link:hover {
+  text-decoration: underline;
+}
+
+.cookie-button {
+  background-color: #1a73e8;
+  color: #ffffff;
+  border: none;
+  border-radius: 18px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cookie-button:hover {
+  background-color: #135ab6;
+}
+/* --------------------- END Cookie Consent Bar --------------------- */

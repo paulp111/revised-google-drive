@@ -18,11 +18,10 @@
       <div class="content-wrapper">
         <div class="content-text">
           <img src="/drivelogo.svg" alt="Google Logo" class="drive-logo" />
-          <h1>Cloud-Speicher leicht gemacht</h1>
+          <h1>Dateien online speichern und freigeben</h1>
           <p>
-            Einfacher und skalierbarer Cloud-Speicher für Einzelpersonen und
-            Teams aller Größen. Gespeicherte Dateien lassen sich auf jedem Gerät
-            hochladen, öffnen, freigeben und bearbeiten.
+            KI-basierter Cloud-Speicher für nahtlose Dateifreigabe und bessere
+            Zusammenarbeit
           </p>
           <!-- Hero Login/Sign-up buttons -->
           <div class="button-group">
@@ -38,6 +37,17 @@
           <img src="/bg.webp" alt="Background Image" class="bg-image" />
         </div>
       </div>
+    </div>
+
+    <!-- Rounded Navigation Bar Section -->
+    <div class="rounded-navbar">
+      <a href="#" class="nav-item active">Gemini in Google Drive</a>
+      <a href="#" class="nav-item">Speicherplatz</a>
+      <a href="#" class="nav-item">Verwaltung</a>
+      <a href="#" class="nav-item">Zusammenarbeit</a>
+      <a href="#" class="nav-item">Sicherheit</a>
+      <a href="#" class="nav-item">Herunterladen</a>
+      <a href="#" class="nav-item">Häufig gestellte Fragen</a>
     </div>
 
     <!-- Video Section with Text -->
@@ -178,12 +188,35 @@
           werden.
         </p>
 
-        <button type="submit" class="button primary">Anmelden</button>
+        <button type="submit" class="news-primary">Anmelden</button>
       </form>
     </div>
 
     <!-- Footer Section -->
-    <%- include('partials/footer') %> 
+    <%- include('partials/footer') %>
 
+    <!-- Cookie Consent Bar -->
+    <div id="cookie-consent" class="cookie-consent">
+      <p>
+        Auf workspace.google.com werden Google eigene Cookies verwendet, um
+        Google-Dienste bereitzustellen, deren Qualität zu verbessern und
+        Datenverkehr zu analysieren.
+        <a href="#" class="cookie-link">Weitere Informationen</a>.
+      </p>
+      <button id="cookie-ok-btn" class="cookie-button">Ok</button>
+    </div>
+
+    <script>
+      if (localStorage.getItem("cookieConsent") !== "accepted") {
+        document.getElementById("cookie-consent").style.display = "flex";
+      }
+
+      document
+        .getElementById("cookie-ok-btn")
+        .addEventListener("click", function () {
+          document.getElementById("cookie-consent").style.display = "none";
+          localStorage.setItem("cookieConsent", "accepted");
+        });
+    </script>
   </body>
 </html>
