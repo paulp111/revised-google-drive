@@ -1,0 +1,155 @@
+/* --------------------- START HEADER --------------------- */
+/* RGB LINE */
+/*
+.header-navbar {
+    width: 100vw; 
+    overflow: hidden;
+    background-color: white;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, blue, violet, pink) 1;
+    box-sizing: border-box;
+}
+    */
+.header-navbar {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  box-sizing: border-box;
+}
+
+.header-navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding: 8px 24px;
+  box-sizing: border-box;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  height: 24px;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+.header-links {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.header-link {
+  font-size: 14px;
+  color: #606368;
+  text-decoration: none;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  padding: 10px 0;
+}
+
+.header-link:hover {
+  color: #202124;
+}
+
+
+/* Dropdown Arrow */
+
+.header-link.dropdown {
+    position: relative;
+    text-align: center;
+}
+
+.dropdown-arrow {
+    display: block;
+    position: absolute;
+    top: 24px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dropdown-arrow svg {
+    stroke: #5f6368; 
+}
+
+.header-link.dropdown:hover .dropdown-arrow svg {
+    stroke: #202124; 
+}
+
+/* Dropdown Arrow End */
+
+.header-nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-button {
+  font-size: 14px;
+  padding: 14px 24px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-family: "Product Sans", Product Sans, Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-button.primary {
+  background-color: #1a73e8;
+  color: #ffffff;
+}
+
+.header-button.primary:hover {
+  background-color: #135ab6;
+}
+
+
+
+/* --------------------- END HEADER --------------------- */
+/*
+
+/* Wrapper for the divided button */
+.divided-button {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a73e8;
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the main text part */
+.button-text {
+    padding: 12px 22px;
+}
+
+/* Style for the SVG arrow */
+.button-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-left: 1px solid #dadce0;
+}
+
+.divided-button:hover {
+    background-color: #f0f0f0;
+}
+
+.divided-button:hover .button-arrow svg path {
+    fill: #135ab6; 
+}

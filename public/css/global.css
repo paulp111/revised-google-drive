@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Product Sans Bold Italic";
+  src: url("/public/fonts/Product Sans Bold Italic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Product Sans Bold";
+  src: url("/public/fonts/Product Sans Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Product Sans Italic";
+  src: url("/public/fonts/Product Sans Italic.ttf") format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Product Sans Regular";
+  src: url("/public/fonts/Product Sans Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "Product Sans Regular", sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
