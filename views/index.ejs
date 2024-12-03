@@ -77,6 +77,16 @@
         </p>
       </div>
     </div>
+
+    <!-- Store Section -->
+     <div class="store">
+      <span>Cloud-Speicher leicht gemacht</span>
+      <div class="section-break">
+        <h2>infacher und skalierbarer Cloud-Speicher für Einzelpersonen und Teams aller Größen. Gespeicherte Dateien lassen sich auf jedem Gerät hochladen, öffnen, freigeben und bearbeiten.
+        </h2>
+      </div>
+     </div>
+
     
 
     <!-- Appstore Section -->
@@ -96,7 +106,10 @@
       </div>
     </div>
 
-    <!-- FAQ Section -->
+    <!-- FAQ Section w/ script -->
+     
+
+
     <div class="faq-section">
       <h2>Sie möchten mehr über Google Drive erfahren?</h2>
       <p>
@@ -113,6 +126,7 @@
         <button class="faq-question">
           Kann ich Dateien von meiner aktuellen Speicherlösung zu Google Drive
           migrieren?
+          <img src="/chevron.svg" alt="Chevron" class="chevron" />
         </button>
         <div class="faq-answer">
           <p>
@@ -125,7 +139,9 @@
       <div class="faq-item">
         <button class="faq-question">
           Wie viel Speicherplatz erhalte ich bei Google Drive?
+          <img src="/chevron.svg" alt="Chevron" class="chevron" />
         </button>
+        
         <div class="faq-answer">
           <p>
             Google Drive bietet standardmäßig 15 GB kostenlosen Speicherplatz.
@@ -138,6 +154,7 @@
       <div class="faq-item">
         <button class="faq-question">
           Was ist anders bei der Unternehmensversion von Google Drive?
+          <img src="/chevron.svg" alt="Chevron" class="chevron" />
         </button>
         <div class="faq-answer">
           <p>
@@ -224,5 +241,47 @@
           localStorage.setItem("cookieConsent", "accepted");
         });
     </script>
+
+      <!-- Script for minimize/maximize -->
+      <script>
+        // Select all FAQ items and controls
+        const faqItems = document.querySelectorAll('.faq-item');
+        const expandAllButton = document.querySelector('.expand-all');
+      
+        // Function to toggle a single FAQ answer
+        faqItems.forEach((item) => {
+          const question = item.querySelector('.faq-question');
+          const answer = item.querySelector('.faq-answer');
+      
+          // Ensure all answers are hidden by default
+          answer.style.display = 'none';
+      
+          question.addEventListener('click', () => {
+            // Toggle the visibility of the answer
+            const isVisible = answer.style.display === 'block';
+            answer.style.display = isVisible ? 'none' : 'block';
+          });
+        });
+      
+        // Function to expand or collapse all FAQ answers
+        expandAllButton.addEventListener('click', (e) => {
+          e.preventDefault();
+      
+          // Check if all FAQs are already expanded
+          const allExpanded = Array.from(faqItems).every(
+            (item) => item.querySelector('.faq-answer').style.display === 'block'
+          );
+      
+          // Set all answers to be visible or hidden
+          faqItems.forEach((item) => {
+            const answer = item.querySelector('.faq-answer');
+            answer.style.display = allExpanded ? 'none' : 'block';
+          });
+      
+          // Update the button text
+          expandAllButton.textContent = allExpanded ? 'Alle maximieren' : 'Alle minimieren';
+        });
+      </script>
+      
   </body>
 </html>

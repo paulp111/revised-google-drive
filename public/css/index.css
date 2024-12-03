@@ -11,6 +11,7 @@
   --background-color: #f8f9fa;
   --headings-color: #202124;
   --para-color: #5F6368;
+  --cookie-color: #ffff;
 }
 /* --------------------- END Farbvariablen --------------------- */
 
@@ -202,7 +203,6 @@
 
 .feature-text a {
   color: var(--primary-blue);
-  text-decoration: none;
 }
 
 .feature-text a:hover {
@@ -210,32 +210,54 @@
 }
 
 .badge-container {
-  display: flex; /* Use flexbox for alignment */
-  justify-content: flex-start; /* Align it to the left (or center if needed) */
-  align-items: center; /* Vertically align with other elements */
-  margin-bottom: 10px; /* Space below the badge */
-  margin-top: 0; /* Add if there's unwanted space above */
+  display: flex; 
+  justify-content: flex-start; 
+  align-items: center; 
+  margin-bottom: 10px; 
+  margin-top: 0; 
 }
 
 .badge-box {
-  display: inline-flex; /* Inline flex for alignment between text and icon */
-  align-items: center; /* Vertical alignment for icon and text */
-  justify-content: center; /* Ensure content stays centered */
-  background-color: #e9effe; /* Light blue background */
-  color: var(--primary-blue); /* Text color */
-  padding: 5px 12px; /* Inner spacing */
-  font-size: 0.9rem; /* Font size */
-  border-radius: 24px; /* Rounded corners */
-  font-weight: 500; /* Medium font weight */
-  gap: 8px; /* Space between icon and text */
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: #e9effe; 
+  color: var(--primary-blue); 
+  padding: 5px 12px; 
+  font-size: 0.9rem; 
+  border-radius: 24px; 
+  font-weight: 500; 
+  gap: 8px; 
 }
 
 .badge-box img {
-  width: 16px; /* Adjust width of the badge icon */
-  height: 16px; /* Adjust height to match */
+  width: 16px; 
+  height: 16px; 
 }
 
 /* --------------------- END --------------------- */
+
+/* --------------------- START STORE SECTION --------------------- */
+.store {
+  flex: 1;
+  font-weight: lighter;
+  max-width: 500px;
+  text-align: left;
+  margin-right: 50px;
+}
+
+.section h2 {
+  font-size: 34px;
+  margin-bottom: 15px;
+  margin-right: 0px;
+  text-align: left;
+  hyphens: auto;
+  word-break: break-word;
+  color: var(--headings-color); 
+}
+
+
+/* --------------------- END STORE SECTION --------------------- */
 
 /* --------------------- START APPSTORE SECTION --------------------- */
 .mobile-app-section {
@@ -274,7 +296,7 @@
 }
 
 .newsletter-section h2 {
-  font-size: 1.5rem; /* Slightly larger title to maintain hierarchy */
+  font-size: 1.5rem; 
   margin-bottom: 20px;
   color: #202124;
 }
@@ -297,7 +319,7 @@
 .form-group input[type="email"],
 .form-group select {
   padding: 10px 15px;
-  font-size: 12px; /* Set font size to 12px */
+  font-size: 12px; 
   border: 1px solid #dadce0;
   border-radius: 8px;
   width: 100%;
@@ -427,6 +449,8 @@
 
 .faq-question {
   background-color: white;
+  justify-content: space-between;
+  align-items: center;
   color: var(--text-color);
   font-size: 1.1rem;
   text-align: left;
@@ -447,6 +471,10 @@
 
 .faq-item.active .faq-answer {
   display: block;
+}
+
+.chevron {
+margin-left: auto;
 }
 /* --------------------- END FAQ SECTION --------------------- */
 
@@ -556,13 +584,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 32px; /* Increased padding for more spacing */
-  background-color: #f9fafa; /* Light background to match original */
-  color: #3c4043; /* Darker gray text for readability */
-  font-size: 16px; /* Larger text for better readability */
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+  padding: 15px 25px; 
+  background-color: var(--cookie-color); 
+  color: var(--para-color); 
+  font-size: 18px; 
+  box-shadow: 0 -1px 1px rgba(53, 53, 53, 0.15); 
   z-index: 1000;
   box-sizing: border-box;
+  
 }
 
 .cookie-consent p {
@@ -574,7 +603,6 @@
 
 .cookie-link {
   color: #1a73e8;
-  text-decoration: none;
   margin-left: 5px;
 }
 
