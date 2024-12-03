@@ -19,7 +19,7 @@ model File {
   mimetype String
   path     String
   createdAt DateTime @default(now())
-  userId   Int       // Make this required again
+  userId   Int       
   user     User      @relation(fields: [userId], references: [id])
 }
 

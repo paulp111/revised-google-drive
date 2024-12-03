@@ -3,28 +3,41 @@
   */
   @font-face {
     font-family: 'Product Sans Bold Italic';
-    src: url('/public/fonts/Product Sans Bold Italic.ttf') format('truetype');
+    src: url('./fonts/Product Sans Bold Italic.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
   }
   
   @font-face {
     font-family: 'Product Sans Bold';
-    src: url('/public/fonts/Product Sans Bold.ttf') format('truetype');
+    src: url('./fonts/Product Sans Bold.ttf') format('truetype');
     font-weight: bold;
   }
   
   @font-face {
     font-family: 'Product Sans Italic';
-    src: url('/public/fonts/Product Sans Italic.ttf') format('truetype');
+    src: url('./fonts/Product Sans Italic.ttf') format('truetype');
     font-style: italic;
   }
   
   @font-face {
     font-family: 'Product Sans Regular';
-    src: url('/public/fonts/Product Sans Regular.ttf') format('truetype');
-  }
-  
+    src: url('./fonts/ProductSansRegular.ttf') format('truetype');
+}
+
+
+
+
+  /* TEST 
+  @font-face {
+    font-family: 'Product Sans Regular';
+    src: url('./fonts/Product Sans Regular.ttf') format("truetype"),
+    url('/fonts/Product Sans Regular.ttf') format("woff");
+}
+   ----- */
+
+
+
   body {
     font-family: 'Product Sans Regular', sans-serif;
   }
@@ -445,12 +458,17 @@ ul li {
   margin-bottom: 20px;
 }
 
+/* CHANGES 02 */
 .faq-controls .expand-all {
   color: #1a73e8;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.1rem;
+  padding-left: 50px 0;
   cursor: pointer;
 }
 
-.faq-controls .arrow {
+.faq-controls .unfold {
   font-size: 1.5rem;
   color: #1a73e8;
   margin-left: 10px;
@@ -515,9 +533,9 @@ ul li {
 /* CALL TO ACTION */
 .footer-call-to-action {
   text-align: center;
-  background-color: #f9f9f9; /* Leichter grauer Hintergrund wie im Bild */
+  background-color: #f9f9f9; 
   padding: 40px 20px;
-  max-width: 80%; /* Breite etwas vor den Rändern enden lassen */
+  max-width: 80%; 
   margin: 50px auto;
   border-radius: 10px;
 }

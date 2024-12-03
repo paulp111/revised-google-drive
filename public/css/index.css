@@ -208,6 +208,33 @@
 .feature-text a:hover {
   text-decoration: underline;
 }
+
+.badge-container {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: flex-start; /* Align it to the left (or center if needed) */
+  align-items: center; /* Vertically align with other elements */
+  margin-bottom: 10px; /* Space below the badge */
+  margin-top: 0; /* Add if there's unwanted space above */
+}
+
+.badge-box {
+  display: inline-flex; /* Inline flex for alignment between text and icon */
+  align-items: center; /* Vertical alignment for icon and text */
+  justify-content: center; /* Ensure content stays centered */
+  background-color: #e9effe; /* Light blue background */
+  color: var(--primary-blue); /* Text color */
+  padding: 5px 12px; /* Inner spacing */
+  font-size: 0.9rem; /* Font size */
+  border-radius: 24px; /* Rounded corners */
+  font-weight: 500; /* Medium font weight */
+  gap: 8px; /* Space between icon and text */
+}
+
+.badge-box img {
+  width: 16px; /* Adjust width of the badge icon */
+  height: 16px; /* Adjust height to match */
+}
+
 /* --------------------- END --------------------- */
 
 /* --------------------- START APPSTORE SECTION --------------------- */
@@ -319,18 +346,22 @@
   text-decoration: underline;
 }
 
+/* workspace-newsletter button */
+.news-primary:hover {
+  background-color: var(--primary-blue);
+  color: var(--background-color);
+}
 
 .news-primary {
-  background-color: #ffffff;
+  background-color: transparent;
   color: var(--primary-blue);
   padding: 10px 32px;
-  font-size: 12px; 
-  border: 1px solid #000000; 
-  border-radius: 6px;
+  font-size: 0.9rem;
+  border: 1px solid var(--border-gray);
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: fit-content;
   margin: 20px auto 0;
+  margin-right: 0px;
 }
 
 .news-primary:hover {
@@ -338,8 +369,10 @@
   color: var(--hover-blue);
 }
 
-
-
+.news-primary:after {
+  font-size: 10px;
+  margin-left: 5px;
+}
 
 /* --------------------- END SIGN UP FORM --------------------- */
 
@@ -372,7 +405,14 @@
 .faq-controls .expand-all {
   color: var(--primary-blue);
   cursor: pointer;
+  text-decoration: none;
+  font-weight: 400;
+  
 }
+.expand-all:hover {
+  text-decoration: underline;
+}
+
 
 .faq-controls .arrow {
   font-size: 1.5rem;
@@ -510,26 +550,26 @@
 /* --------------------- START Cookie Consent Bar --------------------- */
 .cookie-consent {
   position: fixed;
-  color: var(--background-color);
   bottom: 0;
   left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 24px;
-  color: #5f6368;
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
-  font-size: 14px;
-  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.12);
+  padding: 20px 32px; /* Increased padding for more spacing */
+  background-color: #f9fafa; /* Light background to match original */
+  color: #3c4043; /* Darker gray text for readability */
+  font-size: 16px; /* Larger text for better readability */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
   z-index: 1000;
   box-sizing: border-box;
 }
 
 .cookie-consent p {
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.8;
   flex: 1;
+  padding-right: 16px;
 }
 
 .cookie-link {
@@ -543,19 +583,18 @@
 }
 
 .cookie-button {
-  background-color: #1a73e8;
-  color: #ffffff;
+  background-color: #1a73e8; 
+  color: #ffffff; 
   border: none;
-  border-radius: 18px;
-  padding: 8px 20px;
-  font-size: 14px;
+  border-radius: 24px;
+  padding: 12px 28px; 
+  font-size: 16px; 
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.2;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .cookie-button:hover {
-  background-color: #135ab6;
+  background-color: #135ab6; 
 }
-/* --------------------- END Cookie Consent Bar --------------------- */

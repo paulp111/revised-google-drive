@@ -1,7 +1,7 @@
 {
   "name": "drive_app",
   "version": "1.0.0",
-  "description": "",
+  "description": "D\u0000r\u0000i\u0000v\u0000e\u0000-\u0000A\u0000p\u0000p\u0000 SQL  \\c drive - connect to drive  \\du  CREATE USER drive WITH password 'pw'; GRANT ALL PRIVILEGES ON DATABASE drive TO drive; GRANT USAGE ON SCHEMA public TO drive ; GRANT ALL ON ALL TABLES IN SCHEMA public TO drive; \u0000 # Environment variables declared in this file are automatically made available to Prisma. # See the documentation for more detail: https://pris.ly/d/prisma-schema#accessing-environment-variables-from-the-schema",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
