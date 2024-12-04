@@ -10,12 +10,12 @@
   --text-color: #333;
   --background-color: #f8f9fa;
   --headings-color: #202124;
-  --para-color: #5F6368;
+  --para-color: #5f6368;
   --cookie-color: #ffff;
 }
 /* --------------------- END Farbvariablen --------------------- */
 
-/* --------------------- START HERO --------------------- */
+/* --------------------- START Hero Section --------------------- */
 /* Hero Container */
 .page-container {
   display: flex;
@@ -58,7 +58,6 @@
   color: var(--para-color); /* Paragraph color */
 }
 
-
 /* Hero Image (Hello James) */
 .content-image {
   flex: 1;
@@ -75,7 +74,7 @@
   max-width: 200px;
   margin-bottom: 20px;
 }
-/* --------------------- END Hero --------------------- */
+/* --------------------- END Hero Section --------------------- */
 
 /* --------------------- START Rounded Navbar Section ---------------------  */
 .rounded-navbar {
@@ -108,7 +107,7 @@
 }
 /* --------------------- END Rounded Navbar Section ---------------------  */
 
-/* --------------------- START Buttons FOR HERO and CTA --------------------- */
+/* --------------------- START Buttons for HERO and CTA --------------------- */
 .button-group {
   display: flex;
   gap: 10px;
@@ -157,9 +156,9 @@
   font-size: 10px;
   margin-left: 5px;
 }
-/* --------------------- END Buttons FOR HERO and CTA --------------------- */
+/* --------------------- END Buttons for HERO and CTA --------------------- */
 
-/* --------------------- Video Section --------------------- */
+/* --------------------- START Video Section --------------------- */
 .feature-section {
   display: flex;
   justify-content: space-between;
@@ -192,13 +191,13 @@
   text-align: left;
   hyphens: auto;
   word-break: break-word;
-  color: var(--headings-color); 
+  color: var(--headings-color);
 }
 
 .feature-text p {
   font-size: 18px;
   line-height: 1.6;
-  color: var(--para-color); 
+  color: var(--para-color);
 }
 
 .feature-text a {
@@ -210,56 +209,147 @@
 }
 
 .badge-container {
-  display: flex; 
-  justify-content: flex-start; 
-  align-items: center; 
-  margin-bottom: 10px; 
-  margin-top: 0; 
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 0;
 }
 
 .badge-box {
-  display: inline-flex; 
-  align-items: center; 
-  justify-content: center; 
-  background-color: #e9effe; 
-  color: var(--primary-blue); 
-  padding: 5px 12px; 
-  font-size: 0.9rem; 
-  border-radius: 24px; 
-  font-weight: 500; 
-  gap: 8px; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e9effe;
+  color: var(--primary-blue);
+  padding: 5px 12px;
+  font-size: 0.9rem;
+  border-radius: 24px;
+  font-weight: 500;
+  gap: 8px;
 }
 
 .badge-box img {
-  width: 16px; 
-  height: 16px; 
+  width: 16px;
+  height: 16px;
 }
+/* --------------------- END Video Section --------------------- */
 
-/* --------------------- END --------------------- */
-
-/* --------------------- START STORE SECTION --------------------- */
+/* --------------------- START Store Section --------------------- */
 .store {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 1.2em;
+}
+
+.store span {
+  font-size: 2em;
   font-weight: lighter;
+  font-weight: bold;
+  color: var(--headings-color);
+  margin-bottom: 10px;
+}
+
+.section-break h2 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--para-color);
+}
+
+.storage {
+  flex: 1;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.store-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 30px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   max-width: 500px;
-  text-align: left;
-  margin-right: 50px;
 }
 
-.section h2 {
-  font-size: 34px;
-  margin-bottom: 15px;
-  margin-right: 0px;
-  text-align: left;
-  hyphens: auto;
-  word-break: break-word;
-  color: var(--headings-color); 
+.text-box {
+  position: relative;
+  border-left: 4px solid #ddd;
+  padding-left: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.text-box.active {
+  border-left: 4px solid #1a73e8;
+  padding-bottom: 20px;
+}
 
-/* --------------------- END STORE SECTION --------------------- */
+.text-heading {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #666; /* Default grey */
+  margin: 10px 0;
+  transition: color 0.4s ease;
+}
 
-/* --------------------- START APPSTORE SECTION --------------------- */
+.text-box.active .text-heading {
+  color: #000; /* Turns black when active */
+}
+
+.text-details {
+  font-size: 1em;
+  color: #666;
+  margin-top: 10px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+.text-box.active .text-details {
+  max-height: 100px;
+  opacity: 1;
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.store-image {
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.4s ease;
+}
+
+.store-image.active {
+  opacity: 1;
+  position: relative;
+}
+/* --------------------- END Store Section --------------------- */
+
+/* --------------------- START Appstore Section --------------------- */
 .mobile-app-section {
   text-align: center;
   background-color: var(--background-color);
@@ -296,7 +386,7 @@
 }
 
 .newsletter-section h2 {
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   margin-bottom: 20px;
   color: #202124;
 }
@@ -319,7 +409,7 @@
 .form-group input[type="email"],
 .form-group select {
   padding: 10px 15px;
-  font-size: 12px; 
+  font-size: 12px;
   border: 1px solid #dadce0;
   border-radius: 8px;
   width: 100%;
@@ -336,7 +426,7 @@
   max-width: 600px;
   margin: 0 auto;
   text-align: left;
-  font-size: 9px; 
+  font-size: 9px;
   color: #5f6368;
 }
 
@@ -352,7 +442,7 @@
 
 /* Disclaimer paragraph: left-aligned */
 .form-disclaimer {
-  font-size: 12px; 
+  font-size: 12px;
   color: #5f6368;
   max-width: 600px;
   margin: 0 auto;
@@ -395,7 +485,6 @@
   font-size: 10px;
   margin-left: 5px;
 }
-
 /* --------------------- END SIGN UP FORM --------------------- */
 
 /* --------------------- START FAQ SECTION --------------------- */
@@ -429,17 +518,10 @@
   cursor: pointer;
   text-decoration: none;
   font-weight: 400;
-  
 }
+
 .expand-all:hover {
   text-decoration: underline;
-}
-
-
-.faq-controls .arrow {
-  font-size: 1.5rem;
-  color: var(--primary-blue);
-  margin-left: 10px;
 }
 
 .faq-item {
@@ -448,9 +530,10 @@
 }
 
 .faq-question {
+  display: flex; /* Makes the question and chevron inline */
+  justify-content: space-between; /* Pushes chevron to the right */
+  align-items: center; /* Vertically centers content */
   background-color: white;
-  justify-content: space-between;
-  align-items: center;
   color: var(--text-color);
   font-size: 1.1rem;
   text-align: left;
@@ -462,7 +545,7 @@
 }
 
 .faq-answer {
-  display: none;
+  display: none; /* Initially hidden */
   padding: 10px 15px;
   text-align: left;
   color: #666;
@@ -474,7 +557,8 @@
 }
 
 .chevron {
-margin-left: auto;
+  margin-left: auto;
+  transition: transform 0.3s ease;
 }
 /* --------------------- END FAQ SECTION --------------------- */
 
@@ -572,7 +656,6 @@ margin-left: auto;
 .form-disclaimer a:hover {
   text-decoration: underline;
 }
-
 /* --------------------- END NEWSLETTER SECTION --------------------- */
 
 /* --------------------- START Cookie Consent Bar --------------------- */
@@ -584,14 +667,13 @@ margin-left: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 25px; 
-  background-color: var(--cookie-color); 
-  color: var(--para-color); 
-  font-size: 18px; 
-  box-shadow: 0 -1px 1px rgba(53, 53, 53, 0.15); 
+  padding: 15px 25px;
+  background-color: var(--cookie-color);
+  color: var(--para-color);
+  font-size: 18px;
+  box-shadow: 0 -1px 1px rgba(53, 53, 53, 0.15);
   z-index: 1000;
   box-sizing: border-box;
-  
 }
 
 .cookie-consent p {
@@ -611,12 +693,12 @@ margin-left: auto;
 }
 
 .cookie-button {
-  background-color: #1a73e8; 
-  color: #ffffff; 
+  background-color: #1a73e8;
+  color: #ffffff;
   border: none;
   border-radius: 24px;
-  padding: 12px 28px; 
-  font-size: 16px; 
+  padding: 12px 28px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.2;
   cursor: pointer;
@@ -624,5 +706,6 @@ margin-left: auto;
 }
 
 .cookie-button:hover {
-  background-color: #135ab6; 
+  background-color: #135ab6;
 }
+/* --------------------- END Cookie Consent Bar --------------------- */
